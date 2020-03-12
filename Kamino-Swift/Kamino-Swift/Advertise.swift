@@ -42,7 +42,12 @@ public class Advertise : NSObject {
                 statusCode = httpResponse.statusCode
             }
             if let data = responseData {
-                let responseDict : [String:Any] = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String : Any]
+                var responseDict : [String:Any]?
+                do {
+                    responseDict = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String : Any]
+                } catch {
+                    print(error.localizedDescription)
+                }
                 if statusCode != 200 {
                     completition!(false,responseDict,statusCode)
                 } else {
