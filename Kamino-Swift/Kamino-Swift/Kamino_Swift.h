@@ -2,7 +2,7 @@
 //  Kamino_Swift.h
 //  Kamino-Swift
 //
-//  Created by Pero Sechkov on 3/10/20.
+//  Created by Miki Dimitrov on 3/10/20.
 //  Copyright © 2020 ECHO. All rights reserved.
 //
 
