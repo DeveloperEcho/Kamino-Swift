@@ -12,7 +12,7 @@ public typealias CompletitionCallBack = ((_ success: Bool, _ responseObject: [St
 
 public class Advertise : NSObject {
     
-    static let sharedInstance = Advertise()
+    public static let sharedInstance = Advertise()
     
     //BASE URL
     public var baseURl : String!
