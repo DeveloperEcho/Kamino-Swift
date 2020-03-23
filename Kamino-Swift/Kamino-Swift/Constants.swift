@@ -19,6 +19,7 @@ struct Constants {
         static let kAuthorization = "Authorization"
         static let kContentType = "Content-Type"
         
+        static let kSkinOwnerId = "SkinOwnerId"
         static let kAdType = "AdType"
         static let kDeviceId = "DeviceId"
         static let kAdId = "AdId"

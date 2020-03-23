@@ -60,10 +60,10 @@ public class Advertise : NSObject {
         postDataTask.resume()
     }
     
-    public func getAdd(type : Int,deviceId : String,completition : CompletitionCallBack) {
+    public func getAdd(type : Int,deviceId : String,skinOwnerId : String,completition : CompletitionCallBack) {
         let urlString = String.init(format: "%@%@",self.baseURl,Constants.Endpoints.kGetAd)
         let url = URL(string: urlString)!
-        let parameters : [String:Any] = [Constants.Keys.kAdType : type,Constants.Keys.kDeviceId:deviceId]
+        let parameters : [String:Any] = [Constants.Keys.kAdType : type,Constants.Keys.kDeviceId:deviceId,Constants.Keys.kSkinOwnerId : skinOwnerId]
         self.makeRequest(url: url, parameters: parameters) { (sucess,responseDict, statusCode) in
             completition!(sucess,responseDict, statusCode)
         }
